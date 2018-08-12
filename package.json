@@ -1,0 +1,18 @@
+{
+  "name": "user-auth",
+  "version": "1.0.0",
+  "description": "Keep track of the albums that have added beauty to your soul in each solar ring",
+  "main": "app.js",
+  "scripts": {
+    "garland": "nodemon --inspect app",
+    "test": "no tests yet"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.0",
+    "express": "^4.16.3",
+    "mongoose": "^5.2.6",
+    "pug": "^2.0.3"
+  }
+}
