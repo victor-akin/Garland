@@ -1,5 +1,5 @@
 ## Garland
-
+#### Personal project
 A web platform for users to keep track of albums they have listened to  
 Users can give reviews on the albums
 
@@ -9,3 +9,6 @@ Users can give reviews on the albums
 ###### Mongo
 ###### Express
 ###### Node
+
+
+To start app - npm run garland

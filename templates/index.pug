@@ -37,8 +37,8 @@ html
             circle(cx="12" cy="13" r="4")
           strong= 'Garland'
         div
-          a(href="#" class="btn my-2") Login 
-          a(href="#" class="btn my-2") Signup 
+          a(href="#" class="btn my-2" data-toggle="modal" data-target="#login") Login 
+          a(href="signup" class="btn my-2" data-toggle="modal" data-target="#signup") Signup 
           button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation")
             span(class="navbar-toggler-icon")
     main(class="main")
@@ -122,8 +122,62 @@ html
       div(class="container")
         p(class="float-right")
           a(href="#") Back to top
-        p Garland is ...</p>
+        p Garland is a web platform for users to share and review music albums they have listened to</p>
 
+
+<!-- Modal -->
+
+<!-- login -->
+div(class="modal fade" id="login" tabindex="-1" role="dialog" aria-hidden="true")
+  div(class="modal-dialog modal-dialog-centered" role="document")
+    div(class="modal-content")
+      div(class="modal-header")
+        h5(class="modal-title" id="") login
+        button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+          span(aria-hidden="true") &times;
+      div(class="modal-body")
+        form(method="post" action="/login")
+          div(class="form-group row")
+            label(for="" class="col-sm-2 col-form-label") Email
+            div(class="col-sm-10")
+              input(type="email" class="form-control" placeholder="email@example.com")
+          div(class="form-group row")
+            label(for="password" class="col-sm-2 col-form-label") Password
+            div(class="col-sm-10")
+              input(type="password" name="password" class="form-control" placeholder="password")
+          button(type="submit" class="btn btn-primary float-right") login
+      div(class="modal-footer")
+
+<!-- signup -->
+div(class="modal fade" id="signup" tabindex="-1" role="dialog" aria-hidden="true")
+  div(class="modal-dialog modal-dialog-centered" role="document")
+    div(class="modal-content")
+      div(class="modal-header")
+        h5(class="modal-title" id="") Create an account
+        button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+          span(aria-hidden="true") &times;
+      div(class="modal-body")
+        form(method="post" action="/signup")
+          div(class="form-group row")
+            label(for="fullname" class="col-sm-2 col-form-label") Fullname
+            div(class="col-sm-10")
+              input(type="text" name="fullname" class="form-control" placeholder="fullname")
+          div(class="form-group row")
+            label(for="email" class="col-sm-2 col-form-label") Email
+            div(class="col-sm-10")
+              input(type="email" name="email" class="form-control" placeholder="email@example.com")
+          div(class="form-group row")
+            label(for="password" class="col-sm-2 col-form-label") Password
+            div(class="col-sm-10")
+              input(type="password" name="password" class="form-control" placeholder="password")
+          div(class="form-group row")
+            label(for="confirmPassword" class="col-sm-2 col-form-label")
+            div(class="col-sm-10")
+              input(type="password" name="confirmPassword" class="form-control" id="" placeholder="Confirm password")
+          button(type="submit" class="btn btn-primary float-right") Signup
+        
+      div(class="modal-footer")
+        
     script(src="./js/3rd/jquery.min.js")
     script(src="./js/3rd/bootstrap.min.js")
     script(src="./js/3rd/holder.min.js")
