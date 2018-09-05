@@ -1,3 +1,7 @@
+/**
+ * 
+ * @param formData object literal
+ */
 exports.validateForm = function(formData) {
 
     dis = this;

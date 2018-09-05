@@ -29,13 +29,22 @@ app.get('/', function(req, res) {
 // signup route
 app.post('/signup', function(req, res) {
     let err = helpers.validateForm(req.body);
-    if(err.length > 0) console.log(err)
-    // res.send(helpers.validateForm(req.body));
+
+    let redirectInfo = {redirect: false, redirecTo: '/dashboard'};
+    
+    // todo - manage redirect info
+
+    res.status(200).json({err, ...redirectInfo});
 });
 
 // login
 app.post('/login', function(req, res) {
     res.send('login attempt');
+});
+
+// dashboard
+app.get('/dashboard', function(req, res) {
+    res.render('dashboard');
 });
 
 app.listen(3000, console.log('Serving app...'))
