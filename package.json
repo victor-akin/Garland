@@ -5,6 +5,7 @@
   "main": "app.js",
   "scripts": {
     "garland": "nodemon --inspect app",
+    "garlandb": "node DB",
     "test": "no tests yet"
   },
   "author": "",
